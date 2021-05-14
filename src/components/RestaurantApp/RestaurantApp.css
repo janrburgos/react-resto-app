@@ -1,0 +1,77 @@
+.RestaurantApp {
+  margin: 0 auto;
+  width: min(90%, 800px);
+  border: 2px solid black;
+  padding: 5px;
+}
+
+.RestaurantApp .restaurant-app-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.RestaurantApp .category-btn {
+  display: flex;
+  margin: 5px 0;
+  padding: 0 20px 0 5px;
+  width: 125px;
+  position: relative;
+}
+
+.RestaurantApp .category-btn span {
+  width: 12px;
+  font-size: 1.2rem;
+  position: absolute;
+  right: 3px;
+}
+
+.RestaurantApp .category-box {
+  position: absolute;
+  background: #aaa;
+  left: 0;
+  top: 20px;
+}
+
+.RestaurantApp .category-box div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 20px;
+}
+
+.RestaurantApp .category-box div:hover {
+  background: #888;
+  color: white;
+}
+
+.RestaurantApp .category-btn,
+.RestaurantApp .category-box div {
+  cursor: pointer;
+}
+
+.RestaurantApp .restaurant-app-header p {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.RestaurantApp .restaurant-app-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+}
+
+@media only screen and (min-width: 480px) {
+  .RestaurantApp .restaurant-app-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .RestaurantApp .restaurant-app-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

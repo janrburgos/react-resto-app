@@ -1,0 +1,32 @@
+.CartContainer {
+  margin: 0 auto;
+  width: min(90%, 800px);
+  border: 2px solid black;
+  padding: 5px;
+}
+
+.CartContainer .cart-title,
+.CartContainer .empty-message {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.CartContainer .cart-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.CartContainer .cart-items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.CartContainer .total-message {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: right;
+  margin: 10px 20px 10px;
+}

@@ -1,0 +1,40 @@
+.AddItem {
+  border: 2px solid black;
+  width: min(80%, 300px);
+  margin: 20px auto;
+  padding: 10px;
+}
+
+.AddItem .error-message {
+  display: flex;
+  justify-content: center;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.AddItem form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.AddItem form > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.AddItem input,
+.AddItem select {
+  width: min(180px, calc(90% - 60px));
+}
+
+.AddItem button {
+  margin: 10px auto 0 auto;
+  padding: 5px;
+}
+
+.AddItem select,
+.AddItem button {
+  cursor: pointer;
+}

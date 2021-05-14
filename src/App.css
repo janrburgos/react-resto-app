@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  padding-top: 20px;
+  background-color: antiquewhite;
+  min-height: 100vh;
+}
+
+.App a {
+  text-decoration: none;
+  color: inherit;
+}
