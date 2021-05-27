@@ -26,7 +26,10 @@ const MenuItem = (props) => {
         </button>
         <button
           onClick={() => {
-            props.deleteItem(props.item.id);
+            if (window.confirm("Are you sure you want to delete this item?")) {
+              props.deleteItem(props.item.id);
+              alert(`Item ${props.item.name.toUpperCase()} deleted`);
+            }
           }}
         >
           Delete

@@ -1,7 +1,14 @@
 import "./CartItem.css";
 import { connect } from "react-redux";
+import React, { useState, useEffect } from "react";
 
 const CartItem = (props) => {
+  const [quantity, setQuantity] = useState();
+
+  useEffect(() => {
+    setQuantity(props.item.quantity);
+  }, [props.item.quantity]);
+
   return (
     <div className="CartItem">
       <img
@@ -19,6 +26,10 @@ const CartItem = (props) => {
             onClick={() => {
               props.decrement(props.item.id);
             }}
+            disabled={quantity === 1 ? true : false}
+            style={
+              quantity === 1 ? { cursor: "not-allowed" } : { cursor: "pointer" }
+            }
           >
             -
           </button>
